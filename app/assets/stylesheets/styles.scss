@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  background: url('cemetery.jpg');
+  background-size: cover;
+}
+.total-height { height: 100%; }
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  color: #fff;
+  background-color: #388E3C;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  cursor: pointer;
+  border: none;
+  border-radius: 2px;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  &:hover { background-color: #2E7D32; }
+}
