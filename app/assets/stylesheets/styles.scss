@@ -3,42 +3,61 @@ html, body {
   min-height: 100%;
 }
 body {
-  margin: 0;
-  background: image-url('cemetery.jpg');
   background-size: cover;
+  background: image-url('cemetery.jpg');
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   font-family: sans-serif;
+  margin: 0;
 }
 header {
-  background: black;
-  padding: 20px 0;
+  background: #242735;
+  padding: 10px 0;
+  width: 100%;
+  .fa {
+    color: white;
+    font-size: xx-large;
+    display: none;
+  }
   .logo-container {
-    width: 40px;
     img { width: 100%; }
+    width: 40px;
   }
   .flex-container { justify-content: space-between; }
 }
 nav li {
-  display: inline-block;
+  border-radius: 2px;
   color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  &:hover {
+    background: #388E3C;
+  }
 }
 ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }
+.auto-margin { margin: auto; }
 .total-height { height: 100%; }
 .flex-container {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 .center-items { justify-content: center; }
 .btn {
-  color: #fff;
   background-color: #388E3C;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-  cursor: pointer;
-  border: none;
   border-radius: 2px;
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+  color: #fff;
+  cursor: pointer;
   height: 36px;
   line-height: 36px;
   outline: 0;
@@ -47,5 +66,6 @@ ul {
   &:hover { background-color: #2E7D32; }
 }
 .max-container {
+  margin: 0 auto;
   max-width: 1200px;
 }
