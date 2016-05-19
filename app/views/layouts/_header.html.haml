@@ -8,3 +8,5 @@
         %li INICIO
         %li BÚSQUEDA
         %li OBITUARIO
+        - if admin_signed_in?
+          %li= link_to 'CERRAR SESIÓN', destroy_admin_session_path, method: :delete
