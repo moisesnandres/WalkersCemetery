@@ -1,7 +1,7 @@
 %header
   .max-container.flex-container
-    .logo-container
-      = image_tag 'logo.png'
+    = link_to root_path do
+      .logo-container= image_tag 'logo.png'
     %i.fa.fa-bars{"aria-hidden" => "true"}
     %nav
       %ul
