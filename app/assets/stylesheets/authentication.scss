@@ -58,21 +58,7 @@
   input:focus ~ .bar:before, input:focus ~ .bar:after {
     width:50%;
   }
-  .highlight {
-    position:absolute;
-    height:60%;
-    width:100px;
-    top:25%;
-    left:0;
-    pointer-events:none;
-    opacity:0.5;
-  }
-
-  /* active state */
-  input:focus ~ .highlight {
-    animation:inputHighlighter 0.3s ease;
-  }
-  .forgot-pwd {
+  .links {
     margin-top: 30px;
   }
 }

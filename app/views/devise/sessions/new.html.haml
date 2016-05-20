@@ -2,16 +2,13 @@
   .inputs-group
     .group
       = f.email_field :email, required: true
-      %span.highlight
       %span.bar
       %label Correo electrónico
-      %br/
     .group
       = f.password_field :password, autocomplete: "off", required: true
-      %span.highlight
       %span.bar
       %label Contraseña
   .actions
     %button.btn.btn-block INGRESAR
-  .forgot-pwd
+  .links
     = link_to "¿Olvidaste tu contraseña?", new_password_path(resource_name)
