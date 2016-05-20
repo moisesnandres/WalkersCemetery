@@ -8,7 +8,7 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body{"data-no-turbolink" => "true"}
+  %body.authentication{"data-no-turbolink" => "true"}
     - flash.each do |name, msg|
       - if msg.is_a?(String)
         %div{:class => "#{name} alert-message"}
