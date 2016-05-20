@@ -46,6 +46,27 @@ ul {
   padding: 0;
 }
 li a { color: inherit; }
+.alert {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert-message {
+  padding: 0 2.5%;
+  p {
+    line-height: 35px;
+    i {
+      float: right;
+      line-height: inherit;
+      cursor: pointer;
+    }
+  }
+}
+.notice {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
 .auto-margin { margin: auto; }
 .total-height { height: 100%; }
 .flex-container {
@@ -71,3 +92,4 @@ li a { color: inherit; }
   margin: 0 auto;
   max-width: 1200px;
 }
+.no-margin { margin: 0; }

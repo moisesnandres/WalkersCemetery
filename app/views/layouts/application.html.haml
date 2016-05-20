@@ -9,4 +9,10 @@
     = csrf_meta_tags
   %body
     = render 'layouts/header'
+    - flash.each do |name, msg|
+      - if msg.is_a?(String)
+        %div{:class => "#{name} alert-message"}
+          %p.no-margin<
+            = msg
+            %i.fa.fa-times>
     = yield
