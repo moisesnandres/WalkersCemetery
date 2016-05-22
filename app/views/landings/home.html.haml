@@ -1,2 +1,4 @@
 .flex-container.auto-margin
-  %button.btn Wait for it
+  = link_to 'Muertos', walkers_path
+  - if admin_signed_in?
+    %button.btn Editar
