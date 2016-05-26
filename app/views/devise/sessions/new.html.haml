@@ -1,14 +1,15 @@
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .inputs-group
-    .group
-      = f.email_field :email, required: true
-      %span.bar
-      %label Correo electrónico
-    .group
-      = f.password_field :password, autocomplete: "off", required: true
-      %span.bar
-      %label Contraseña
-  .links
-    = link_to "¿Olvidaste tu contraseña?", recover_password_path
-  .actions
-    %button.btn.btn-block INGRESAR
+.authentication-body
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .inputs-group
+      .group
+        = f.email_field :email, required: true
+        %span.bar
+        %label Correo electrónico
+      .group
+        = f.password_field :password, autocomplete: "off", required: true
+        %span.bar
+        %label Contraseña
+    .links
+      = link_to "¿Olvidaste tu contraseña?", recover_password_path
+    .actions
+      %button.btn.btn-block INGRESAR

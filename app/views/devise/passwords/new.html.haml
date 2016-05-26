@@ -1,11 +1,12 @@
-= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = devise_error_messages!
-  .inputs-group
-    .group
-      = f.email_field :email, required: true
-      %span.bar
-      %label Correo electrónico
-  .links
-    = link_to "Volver al login", sign_in_path
-  .actions
-    %button.btn.btn-block RESTABLECER CONTRASEÑA
+.authentication-body
+  = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = devise_error_messages!
+    .inputs-group
+      .group
+        = f.email_field :email, required: true
+        %span.bar
+        %label Correo electrónico
+    .links
+      = link_to "Volver al login", sign_in_path
+    .actions
+      %button.btn.btn-block RESTABLECER CONTRASEÑA
