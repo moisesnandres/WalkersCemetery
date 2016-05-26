@@ -11,6 +11,12 @@ $(document).ready(function(){
     $('.settings').toggle();
   });
   $('.group').each(function(){
+    if ($(this).find('input').val().length > 0) {
+      $(this).parent().find('label').addClass('label-transition');
+    }
+    else {
+      $(this).parent().find('label').removeClass('label-transition');
+    }
     $(this).find('input').change(function(){
       if ($(this).val().length > 0) {
         $(this).parent().find('label').addClass('label-transition');
