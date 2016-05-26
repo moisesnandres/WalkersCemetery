@@ -55,9 +55,7 @@ nav li {
   line-height: 36px;
   outline: 0;
   padding: 0 1rem;
-  &:hover {
-    background: $primaryColor;
-  }
+  &:hover { background: $primaryColor; }
 }
 a { text-decoration: none; }
 ul {

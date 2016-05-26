@@ -18,8 +18,8 @@
     border: none;
     padding: 10px 0;
     border-bottom: 1px solid #757575;
+    &:focus { outline: none; }
   }
-  input:focus { outline:none; }
   label {
     color: $primaryColor;
     font-weight: normal;
@@ -37,8 +37,7 @@
   .bar  {
     position:relative;
     display:block;
-  }
-  .bar:before, .bar:after   {
+    &:before, &:after {
     content:'';
     height:2px;
     width:0;
@@ -46,19 +45,11 @@
     position:absolute;
     background: $primaryColor;
     transition:0.2s ease all;
+    }
+    &:before { left: 50%; }
+    &:after { right: 50%; }
   }
-  .bar:before {
-    left:50%;
-  }
-  .bar:after {
-    right:50%;
-  }
-
   /* active state */
-  input:focus ~ .bar:before, input:focus ~ .bar:after {
-    width:50%;
-  }
-  .links {
-    margin: 30px 0 20px;
-  }
+  input:focus ~ .bar:before, input:focus ~ .bar:after { width:50%; }
+  .links { margin: 30px 0 20px; }
 }
