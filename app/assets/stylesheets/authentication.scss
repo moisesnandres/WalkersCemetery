@@ -1,0 +1,55 @@
+.authentication {
+  form {
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+  .inputs-group { margin-top: 21px; }
+  .group {
+    position: relative;
+    margin-bottom: 45px;
+  }
+  input {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #757575;
+    &:focus { outline: none; }
+  }
+  label {
+    color: $primaryColor;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    transition: 0.2s ease all;
+  }
+  /* active state */
+  input:focus ~ label, input:valid ~ label, .label-transition {
+    top: -20px;
+    font-size: 14px;
+    color: $primaryColor;
+  }
+  .bar  {
+    position:relative;
+    display:block;
+    &:before, &:after {
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background: $primaryColor;
+    transition:0.2s ease all;
+    }
+    &:before { left: 50%; }
+    &:after { right: 50%; }
+  }
+  /* active state */
+  input:focus ~ .bar:before, input:focus ~ .bar:after { width:50%; }
+  .links { margin: 30px 0 20px; }
+}

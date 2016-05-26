@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :admins
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'landings#home'
-
+  resources :walkers
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -13,6 +14,12 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  devise_scope :admin do
+    get 'ingresar', to: 'devise/sessions#new', as: :sign_in
+    get 'recuperar_contraseña', to: 'devise/passwords#new', as: :recover_password
+    get 'nueva_contraseña', to: 'devise/passwords#edit', as: :new_password
+    get 'cambiar_contraseña', to: 'devise/registrations#edit', as: :change_password
+  end
 
   # Example resource route with options:
   #   resources :products do

@@ -9,12 +9,13 @@ body {
   flex-wrap: wrap;
   font-family: sans-serif;
   margin: 0;
+  font-size: 16px;
 }
 header {
-  background: #242735;
+  background: $black;
   padding: 10px 0;
   width: 100%;
-  .fa {
+  .fa-bars {
     color: white;
     cursor: pointer;
     font-size: xx-large;
@@ -25,7 +26,27 @@ header {
     width: 40px;
   }
   .flex-container { justify-content: space-between; }
+  nav {
+    position: relative;
+    .settings {
+      display: none;
+      position: absolute;
+      width: 250px;
+      right: 0;
+      text-align: right;
+      background: $black;
+      top: 50px;
+      padding: 20px 0;
+      li {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
 }
+button, input { font-size: inherit; }
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset; }
 nav li {
   border-radius: 2px;
   color: white;
@@ -34,15 +55,37 @@ nav li {
   height: 36px;
   line-height: 36px;
   outline: 0;
-  padding: 0 2rem;
-  &:hover {
-    background: #388E3C;
-  }
+  padding: 0 1rem;
+  &:hover { background: $primaryColor; }
 }
+a { text-decoration: none; }
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+li a { color: inherit; }
+a { color: $secondaryColor; }
+.alert {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert-message {
+  padding: 0 2.5%;
+  p {
+    line-height: 35px;
+    i {
+      float: right;
+      line-height: inherit;
+      cursor: pointer;
+    }
+  }
+}
+.notice {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
 }
 .auto-margin { margin: auto; }
 .total-height { height: 100%; }
@@ -52,7 +95,7 @@ ul {
 }
 .center-items { justify-content: center; }
 .btn {
-  background-color: #388E3C;
+  background-color: $primaryColor;
   border-radius: 2px;
   border: none;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
@@ -63,9 +106,14 @@ ul {
   outline: 0;
   padding: 0 2rem;
   text-transform: uppercase;
-  &:hover { background-color: #2E7D32; }
+  &:hover { background-color: $darkPrimaryColor; }
+}
+.btn-block {
+  display: block;
+  width: 100%;
 }
 .max-container {
   margin: 0 auto;
   max-width: 1200px;
 }
+.no-margin { margin: 0; }

@@ -1,0 +1,17 @@
+= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
+  = devise_error_messages!
+  .inputs-group
+    .group
+      = f.password_field :current_password, autocomplete: "off", required: true
+      %span.bar
+      %label Contraseña actual
+    .group
+      = f.password_field :password, autocomplete: "off", required: true
+      %span.bar
+      %label Nueva contraseña
+    .group
+      = f.password_field :password_confirmation, autocomplete: "off", required: true
+      %span.bar
+      %label Confirmar nueva contraseña
+    .actions
+      %button.btn.btn-block CAMBIAR CONTRASEÑA
