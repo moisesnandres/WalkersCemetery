@@ -8,8 +8,7 @@
       = f.password_field :password, autocomplete: "off", required: true
       %span.bar
       %label Contraseña
+  .links
+    = link_to "¿Olvidaste tu contraseña?", recover_password_path
   .actions
     %button.btn.btn-block INGRESAR
-  /
-    .links
-      = link_to "¿Olvidaste tu contraseña?", recover_password_path

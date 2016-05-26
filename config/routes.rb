@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :admins, skip: :registrations
+  devise_for :admins
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   devise_scope :admin do
     get 'ingresar', to: 'devise/sessions#new', as: :sign_in
     get 'recuperar_contraseña', to: 'devise/passwords#new', as: :recover_password
+    get 'nueva_contraseña', to: 'devise/passwords#edit', as: :new_password
+    get 'cambiar_contraseña', to: 'devise/registrations#edit', as: :change_password
   end
 
   # Example resource route with options:

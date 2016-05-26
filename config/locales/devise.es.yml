@@ -11,7 +11,7 @@ es:
   devise:
     failure:
       already_authenticated: 'Ya iniciaste sesión.'
-      unauthenticated: 'Tienes que registrarte o iniciar sesión antes de continuar.'
+      unauthenticated: 'Tienes que iniciar sesión antes de continuar.'
       unconfirmed: 'Tienes que confirmar tu cuenta antes de continuar.'
       locked: 'Tu cuente está bloqueada.'
       invalid: 'Email o contraseña inválidos.'
@@ -24,6 +24,7 @@ es:
       signed_in: 'Iniciaste sesión correctamente.'
       signed_out: 'Cerraste sesión correctamente.'
     passwords:
+      no_token: "No se puede acceder a esta página sin que viene de un mensaje de restablecimiento de contraseña."
       send_instructions: 'Recibirás un email con instrucciones para reiniciar tu contraseña en unos minutos.'
       updated: 'Tu contraseña fue cambiada correctamente. Has iniciado sesión.'
       updated_not_active: 'Tu contraseña fue cambiada correctamente.'
