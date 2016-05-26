@@ -46,6 +46,7 @@ header {
   }
 }
 button, input { font-size: inherit; }
+input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset; }
 nav li {
   border-radius: 2px;
   color: white;

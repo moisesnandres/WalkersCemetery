@@ -10,6 +10,16 @@ $(document).ready(function(){
   $('.account').click(function(){
     $('.settings').toggle();
   });
+  $('.group').each(function(){
+    $(this).find('input').change(function(){
+      if ($(this).val().length > 0) {
+        $(this).parent().find('label').addClass('label-transition');
+      }
+      else {
+        $(this).parent().find('label').removeClass('label-transition');
+      }
+    });
+  });
 });
 $(window).resize(function(){
   if ($(window).width()>768) {
