@@ -12,10 +12,10 @@ body {
   font-size: 16px;
 }
 header {
-  background: #242735;
+  background: $black;
   padding: 10px 0;
   width: 100%;
-  .fa {
+  .fa-bars {
     color: white;
     cursor: pointer;
     font-size: xx-large;
@@ -26,6 +26,24 @@ header {
     width: 40px;
   }
   .flex-container { justify-content: space-between; }
+  nav {
+    position: relative;
+    .settings {
+      display: none;
+      position: absolute;
+      width: 250px;
+      right: 0;
+      text-align: right;
+      background: $black;
+      top: 50px;
+      padding: 20px 0;
+      li {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 button, input { font-size: inherit; }
 nav li {
@@ -36,7 +54,7 @@ nav li {
   height: 36px;
   line-height: 36px;
   outline: 0;
-  padding: 0 2rem;
+  padding: 0 1rem;
   &:hover {
     background: $primaryColor;
   }

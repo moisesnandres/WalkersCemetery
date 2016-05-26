@@ -7,6 +7,14 @@
       %ul
         %li INICIO
         %li BÚSQUEDA
+        %li INFORMES
         %li OBITUARIO
         - if admin_signed_in?
-          %li= link_to 'CERRAR SESIÓN', destroy_admin_session_path, method: :delete
+          %li.account
+            CUENTA
+            %i.fa.fa-chevron-down
+          %ul.settings
+            = link_to change_password_path do
+              %li Cambiar contraseña
+            = link_to destroy_admin_session_path, method: :delete do
+              %li Cerrar sesión
