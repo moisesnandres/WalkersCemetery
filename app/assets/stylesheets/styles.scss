@@ -4,6 +4,15 @@ a {
   text-decoration: none;
   color: $secondaryColor;
 }
+iframe {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 169px;
+}
+section {
+  padding: 20px 0;
+}
 ul {
   list-style: none;
 }
@@ -21,9 +30,16 @@ header {
     }
   }
   .settings { display: none; }
-
 }
-.max-container {
+.header {
+  position: absolute;
+  width: 100%;
+}
+.background {
+  height: 50vh;
+  background-image: url("background.jpg");
+}
+.max-container, .medium-container {
   margin: 0 auto;
   width: 90%;
 }
@@ -70,6 +86,10 @@ header {
 .btn-block {
   display: block;
   width: 100%;
+}
+.slider {
+  h3 { color: $primaryColor; }
+  text-align: center;
 }
 .no-margin { margin: 0; }
 .no-padding { padding: 0; }
