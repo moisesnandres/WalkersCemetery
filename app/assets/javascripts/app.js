@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
   });
   $('.account').click(function(){
-    $('.settings').toggle();
+    $('.settings').slideToggle();
   });
   $('.group').each(function(){
     if ($(this).find('input').val().length > 0) {

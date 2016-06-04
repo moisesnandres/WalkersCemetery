@@ -1,3 +1,32 @@
+html { height: 100%; }
+body { background: #f6f6f6; }
+a {
+  text-decoration: none;
+  color: $secondaryColor;
+}
+ul {
+  list-style: none;
+}
+// HEADER STYLES
+header {
+  background: $black;
+  padding: 15px 0;
+  .logo img { height: 60px; }
+  li {
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    &:hover {
+      background: $primaryColor;
+    }
+  }
+  .settings { display: none; }
+
+}
+.max-container {
+  margin: 0 auto;
+  width: 90%;
+}
 .alert {
   color: #a94442;
   background-color: #f2dede;
@@ -42,3 +71,5 @@
   display: block;
   width: 100%;
 }
+.no-margin { margin: 0; }
+.no-padding { padding: 0; }

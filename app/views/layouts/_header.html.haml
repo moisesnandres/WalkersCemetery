@@ -1,0 +1,18 @@
+%header
+  .max-container
+    .logo= image_tag 'logo.png'
+    %nav
+      %ul.no-margin.no-padding.nav
+        %li INICIO
+        %li BÚSQUEDA
+        %li INFORMES
+        %li OBITUARIO
+        - if admin_signed_in?
+          %li.account
+            CUENTA
+            %i.fa.fa-chevron-down
+          %ul.settings.no-padding
+            = link_to change_password_path do
+              %li Cambiar contraseña
+            = link_to destroy_admin_session_path, method: :delete do
+              %li Cerrar sesión

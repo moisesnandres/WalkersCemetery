@@ -1,6 +1,10 @@
 .authentication {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   .authentication-body {
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     margin: auto;
   }
   form {
