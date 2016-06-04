@@ -5,4 +5,7 @@ class LandingsController < ApplicationController
   def home
   end
 
+  def informes
+  end
+
 end
