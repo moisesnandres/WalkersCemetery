@@ -1,71 +1,3 @@
-html, body {
-  height: 100%;
-  min-height: 100%;
-}
-body {
-  background: #f1f1f1;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-family: sans-serif;
-  margin: 0;
-  font-size: 16px;
-}
-header {
-  background: $black;
-  padding: 10px 0;
-  width: 100%;
-  .fa-bars {
-    color: white;
-    cursor: pointer;
-    font-size: xx-large;
-    display: none;
-  }
-  .logo-container {
-    img { width: 100%; }
-    width: 40px;
-  }
-  .flex-container { justify-content: space-between; }
-  nav {
-    position: relative;
-    .settings {
-      display: none;
-      position: absolute;
-      width: 250px;
-      right: 0;
-      text-align: right;
-      background: $black;
-      top: 50px;
-      padding: 20px 0;
-      li {
-        display: block;
-        width: 80%;
-        margin: 0 auto;
-      }
-    }
-  }
-}
-button, input { font-size: inherit; }
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset; }
-nav li {
-  border-radius: 2px;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  height: 36px;
-  line-height: 36px;
-  outline: 0;
-  padding: 0 1rem;
-  &:hover { background: $primaryColor; }
-}
-a { text-decoration: none; }
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-li a { color: inherit; }
-a { color: $secondaryColor; }
 .alert {
   color: #a94442;
   background-color: #f2dede;
@@ -87,8 +19,6 @@ a { color: $secondaryColor; }
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
-.auto-margin { margin: auto; }
-.total-height { height: 100%; }
 .flex-container {
   align-items: center;
   display: flex;
@@ -112,8 +42,3 @@ a { color: $secondaryColor; }
   display: block;
   width: 100%;
 }
-.max-container {
-  margin: 0 auto;
-  max-width: 1200px;
-}
-.no-margin { margin: 0; }
