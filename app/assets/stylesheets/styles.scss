@@ -72,4 +72,44 @@ header {
   width: 100%;
 }
 .no-margin { margin: 0; }
-.no-padding { padding: 0; }
+.no-padding { padding: 0;}
+
+.subtitulos 
+{
+  border: none;
+  color: #088A08;
+  cursor: pointer;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container
+{
+ display: flex;
+ justify-content: space-around;
+ flex-wrap: wrap;
+}
+
+.containertwo
+{
+ width: 40%;
+ text-align: left;
+}
+
+.title
+{ 
+
+  border: 1px solid #E6E6E6;
+  background: #088A08;
+  color: #FFFFFF;
+  text-align: center; 
+}
+
+.items
+{   
+  box-shadow: 10px 5px 5px black;
+}
