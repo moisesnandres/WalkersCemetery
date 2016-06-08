@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root 'landings#home'
   resources :walkers
   get '/informes' => 'landings#informes'
+  get '/formulario' => 'landings#formulario'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
