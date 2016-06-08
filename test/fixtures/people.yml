@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombres: MyString
+  apellidos: MyString
+  fecha_nac: 2016-06-07
+  fecha_fallecimiento: 2016-06-07
+  obituario: false
+
+two:
+  nombres: MyString
+  apellidos: MyString
+  fecha_nac: 2016-06-07
+  fecha_fallecimiento: 2016-06-07
+  obituario: false
