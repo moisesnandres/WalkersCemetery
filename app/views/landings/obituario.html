@@ -1,1 +1,33 @@
-obituario.html
+<div class=NUBE12>
+	<meta charset="utf-8" />
+	<title>Obituario del Dia</title>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			$("#fecha").datepicker(
+			{
+				dateFormat: "dd/mm/yy",
+				dayNames: [ "Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado" ],
+				dayNamesMin: [ "Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa" ],
+				firstDay: 1,
+				gotoCurrent: true,
+				monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Deciembre" ]
+			}
+		);
+		});
+	</script>
+	<style>
+		#fecha {width:100px;text-align:center; }
+	</style>
+</head>
+<body>
+	<h1>Obituario del Dia</h1>
+	<form>
+		<p>Fecha: <input type="text" name="fecha" id="fecha" value=""></p>
+		<p>Buscar por DNI: <input type="text" ></p>
+	</form>
+</body>
+</div>
+
