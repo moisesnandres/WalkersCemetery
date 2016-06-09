@@ -8,4 +8,11 @@ class LandingsController < ApplicationController
 	def obituario
 	end
 
+  def informes
+  end
+
+  def formulario
+  end
+
+
 end

@@ -31,6 +31,7 @@ $(window).resize(function(){
   if ($(window).width()>768) {
     $('nav ul').removeAttr('style');
   }
+});
 
 
 
@@ -72,7 +73,7 @@ jQuery( ".next", curContainer ).click(function() {
 function calendar(){
   startDay = (new Date(curYear, curMonth, 1)).getDay();
   jQuery('.curr-month b').html('<span>'+months[curMonth]+'</span><sup> '+curYear+'</sup>');
-  
+
   prevMonth = noofdays[curMonth-1];
   if(curMonth==11){prevMonth = noofdays[0]}else if(curMonth==0){prevMonth = noofdays[11]};
   totalDays = noofdays[curMonth];
@@ -86,19 +87,19 @@ function calendar(){
   for (var i=0; i<8; i++){
     jQuery('.all-days ul').append('<li>'+weeks[i]+'</li>');
   }
-  
+
   jQuery( ".all-date ul li" ).remove();
   for (var i=0; i<42; i++){
     var day;
     day = (i > 6)?(weeks[i % 7]):(weeks[i]);
-    
+
     if(i>=startDay){
     counter++;
     if(counter>totalDays){
       counter=1;
       flag=false;
     }
-    
+
     if(flag==true){
       jQuery('.all-date ul').append('<li class="monthdate"><span>'+counter+'</span><sup> '+day+'</sup></li>');
     }else{
@@ -108,18 +109,18 @@ function calendar(){
     jQuery('.all-date ul').append('<li class="inactive"><span>'+precounter+'</span><sup> '+day+'</sup></li>');
     precounter++;
     }
-    
+
     jQuery(jQuery('.all-date ul li')[i]).addClass("bnone");
     if(i==rightbox){
     jQuery(jQuery('.all-date ul li')[i]).removeClass("bnone");
     jQuery(jQuery('.all-date ul li')[rightbox]).addClass("b-right");
     rightbox = rightbox+7;
     }
-    
+
     if(i>34){
     jQuery(jQuery('.all-date ul li')[i]).addClass("b-bottom");
     }
-    
+
     if((jQuery(jQuery('.all-date ul li')[i]).children('span').text()==curDate) && (months[(new Date()).getMonth()]==jQuery('.curr-month span').text())&&(jQuery('.curr-month sup').text()==curYear) && (jQuery(jQuery('.all-date ul li')[i]).css('opacity') == 1)){
       jQuery(jQuery('.all-date ul li')[i]).css({"background-color":"#f39c12","color":"#fff"});
     }
