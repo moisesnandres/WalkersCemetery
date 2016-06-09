@@ -73,3 +73,45 @@ header {
 }
 .no-margin { margin: 0; }
 .no-padding { padding: 0; }
+
+
+
+$items: 4;
+$animation-time: 4s;
+$transition-time: .5s;
+$scale: 20%;
+
+$total-time: ($animation-time * $items);
+$scale-base-1: (1 + $scale / 100%);
+
+
+.NUBE12
+{
+  position: absolute;
+  right: 70%;
+  width: -20%;
+}
+#dia{
+  display:inline-table;
+  float:left;
+  margin:0px 20px;
+  width:280px;
+}
+#dia-tabla{
+  display:inline-table;
+  height:auto;
+  margin:0px 0px 0px 20px;
+  width:480px;
+}
+#dia-tabla table{
+  border:1px solid #ddd;
+  height:auto;
+  width:480px;
+}
+#dia-tabla table tr td{
+  vertical-align:text-top;
+}
+
+
+
+

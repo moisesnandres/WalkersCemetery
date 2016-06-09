@@ -2,7 +2,10 @@
 # LandingsController
 class LandingsController < ApplicationController
 
-  def home
-  end
+	def home
+	end
+
+	def obituario
+	end
 
 end
