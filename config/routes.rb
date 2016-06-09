@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :walkers
   get '/informes' => 'landings#informes'
   get '/formulario' => 'landings#formulario'
+  get '/obituario' => "landings#obituario"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

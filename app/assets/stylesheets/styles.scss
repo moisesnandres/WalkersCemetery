@@ -72,9 +72,10 @@ header {
   width: 100%;
 }
 .no-margin { margin: 0; }
+<<<<<<< HEAD
 .no-padding { padding: 0;}
 
-.subtitulos 
+.subtitulos
 {
   border: none;
   color: #088A08;
@@ -101,15 +102,15 @@ header {
 }
 
 .title
-{ 
+{
   border: 1px solid #E6E6E6;
   background: #088A08;
   color: #FFFFFF;
-  text-align: center; 
+  text-align: center;
 }
 
 .items
-{   
+{
   box-shadow: 10px 5px 5px silver;
 }
 
@@ -125,7 +126,7 @@ header {
     padding:0px;
 }
 .contact_form li{
-    padding:12px; 
+    padding:12px;
     border-bottom:1px solid #eee;
     position:relative;
 }
@@ -138,8 +139,8 @@ header {
     padding:3px;
 }
 .contact_form input {
-    height:20px; 
-    width:220px; 
+    height:20px;
+    width:220px;
     padding:5px 8px;
 }
 .contact_form textarea {padding:8px; width:300px;}
@@ -173,13 +174,56 @@ button.submit {
 }
 button.submit:hover {
     opacity:.85;
-    cursor: pointer; 
+    cursor: pointer;
 }
 button.submit:active {
     border: 1px solid #20911e;
-    box-shadow: 0 0 10px 5px #356b0b inset; 
+    box-shadow: 0 0 10px 5px #356b0b inset;
     -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
     -moz-box-shadow: 0 0 10px 5px #356b0b inset;
     -ms-box-shadow: 0 0 10px 5px #356b0b inset;
-    -o-box-shadow: 0 0 10px 5px #356b0b inset;    
+    -o-box-shadow: 0 0 10px 5px #356b0b inset;
 }
+.no-padding { padding: 0; }
+
+
+
+$items: 4;
+$animation-time: 4s;
+$transition-time: .5s;
+$scale: 20%;
+
+$total-time: ($animation-time * $items);
+$scale-base-1: (1 + $scale / 100%);
+
+
+.NUBE12
+{
+  position: absolute;
+  right: 70%;
+  width: -20%;
+}
+#dia{
+  display:inline-table;
+  float:left;
+  margin:0px 20px;
+  width:280px;
+}
+#dia-tabla{
+  display:inline-table;
+  height:auto;
+  margin:0px 0px 0px 20px;
+  width:480px;
+}
+#dia-tabla table{
+  border:1px solid #ddd;
+  height:auto;
+  width:480px;
+}
+#dia-tabla table tr td{
+  vertical-align:text-top;
+}
+
+
+
+
