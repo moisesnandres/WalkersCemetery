@@ -1,3 +1,10 @@
+@media screen and (min-width: 481px) {
+  iframe {
+    width: 480px;
+    height: 270px;
+  }
+  .medium-container { width: 90%; }
+}
 @media screen and (min-width: 769px) {
   header {
     .max-container {
@@ -19,6 +26,17 @@
       li { border-radius: 0; }
     }
   }
+  .slider {
+    width: 640px;
+  }
+  iframe {
+    width: 640px;
+    height: 360px;
+  }
+}
+@media screen and (min-width: 850px) {
+  width: 853;
+  height: 480;
 }
 @media screen and (min-width: 1260px) {
   .max-container { width: 1200px; }

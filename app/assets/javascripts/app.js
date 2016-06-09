@@ -10,6 +10,15 @@ $(document).ready(function(){
   $('.account').click(function(){
     $('.settings').slideToggle();
   });
+  $('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 6000,
+  });
   $('.group').each(function(){
     if ($(this).find('input').val().length > 0) {
       $(this).parent().find('label').addClass('label-transition');
