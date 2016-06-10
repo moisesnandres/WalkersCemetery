@@ -52,7 +52,7 @@ header {
 }
 .background {
   height: 50vh;
-  background-image: url("/assets/background.jpg");
+  background-image: image-url("background.jpg");
   background-size: cover;
 }
 .max-container, .medium-container {
