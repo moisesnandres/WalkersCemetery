@@ -1,6 +1,7 @@
 .authentication-body
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
     = devise_error_messages!
+    .image-container=image_tag 'logo-cruz.png'
     .inputs-group
       .group
         = f.password_field :current_password, autocomplete: "off", required: true

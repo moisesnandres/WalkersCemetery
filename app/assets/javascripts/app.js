@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.fa-bars').click(function(){
-    $('nav ul').slideToggle('slow');
+    $('nav').slideToggle('slow');
   });
   $('.alert-message i').each(function(){
     $(this).click(function(){
@@ -38,6 +38,6 @@ $(document).ready(function(){
 });
 $(window).resize(function(){
   if ($(window).width()>768) {
-    $('nav ul').removeAttr('style');
+    $('nav').removeAttr('style');
   }
 });

@@ -1,13 +1,18 @@
 %header
   .max-container
-    .logo= image_tag 'logo-header.png'
+    = link_to root_path do
+      .logo= image_tag 'logo-header.png'
     %i.fa.fa-bars
     %nav
       %ul.no-margin.no-padding.nav
-        %li=link_to 'INICIO', root_path
-        %li=link_to 'BÚSQUEDA', busqueda_path
-        %li=link_to 'INFORMES', informes_path
-        %li=link_to 'OBITUARIO', obituario_path
+        =link_to root_path do
+          %li INICIO
+        =link_to busqueda_path do
+          %li BÚSQUEDA
+        =link_to informes_path do
+          %li INFORMES
+        =link_to obituario_path do
+          %li OBITUARIO
         - if admin_signed_in?
           %li.account CUENTA
           %ul.settings.no-padding
