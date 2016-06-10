@@ -1,9 +1,9 @@
 @media screen and (min-width: 481px) {
   iframe {
-    width: 480px;
-    height: 270px;
+    width: 460px;
+    height: 260px;
   }
-  .medium-container { width: 90%; }
+  .medium-container { width: 80%; }
 }
 @media screen and (min-width: 769px) {
   header {
@@ -24,9 +24,6 @@
       background: $black;
       li { border-radius: 0; }
     }
-  }
-  .slider {
-    width: 640px;
   }
   iframe {
     width: 640px;

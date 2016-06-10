@@ -4,10 +4,10 @@
     %i.fa.fa-bars
     %nav
       %ul.no-margin.no-padding.nav
-        %li INICIO
-        %li BÚSQUEDA
-        %li INFORMES
-        %li OBITUARIO
+        %li=link_to 'INICIO', root_path
+        %li=link_to 'BÚSQUEDA', busqueda_path
+        %li=link_to 'INFORMES', informes_path
+        %li=link_to 'OBITUARIO', obituario_path
         - if admin_signed_in?
           %li.account CUENTA
           %ul.settings.no-padding
