@@ -33,10 +33,11 @@
     width: 640px;
     height: 360px;
   }
+  .necesity-type, .aditional-info { justify-content: space-around; }
+  .content { width: 40%; }
 }
 @media screen and (min-width: 850px) {
-  width: 853;
-  height: 480;
+  .content { width: 31%; }
 }
 @media screen and (min-width: 1260px) {
   .max-container { width: 1200px; }
