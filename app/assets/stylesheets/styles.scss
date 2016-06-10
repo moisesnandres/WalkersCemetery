@@ -53,6 +53,7 @@ header {
 .background {
   height: 50vh;
   background-image: url("background.jpg");
+  background-size: cover;
 }
 .max-container, .medium-container {
   margin: 0 auto;
