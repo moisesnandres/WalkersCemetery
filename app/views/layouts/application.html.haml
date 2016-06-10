@@ -9,12 +9,11 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body.main{"data-no-turbolink" => "true"}
-    .header
-      = render 'layouts/header'
-      - flash.each do |name, msg|
-        - if msg.is_a?(String)
-          %div{:class => "#{name} alert-message"}
-            %p.no-margin<
-              = msg
-              %i.fa.fa-times>
+    = render 'layouts/header'
+    - flash.each do |name, msg|
+      - if msg.is_a?(String)
+        %div{:class => "#{name} alert-message"}
+          %p.no-margin<
+            = msg
+            %i.fa.fa-times>
     = yield

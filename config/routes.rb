@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/informes' => 'landings#informes'
   get '/formulario' => 'landings#formulario'
   get '/obituario' => "landings#obituario"
+  get '/busqueda' => 'landings#busqueda'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
