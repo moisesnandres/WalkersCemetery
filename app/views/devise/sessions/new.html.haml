@@ -1,5 +1,6 @@
 .authentication-body
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .image-container=image_tag 'logo-cruz.png'
     .inputs-group
       .group
         = f.email_field :email, required: true

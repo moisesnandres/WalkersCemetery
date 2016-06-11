@@ -1,21 +1,21 @@
 @media screen and (min-width: 481px) {
   iframe {
-    width: 480px;
-    height: 270px;
+    width: 460px;
+    height: 260px;
   }
-  .medium-container { width: 90%; }
+  .medium-container { width: 80%; }
 }
 @media screen and (min-width: 769px) {
   header {
-    .max-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    nav {
+      display: block;
+      width: auto;
+      .nav {
+        display: flex;
+        position: relative;
+      }
     }
-    nav .nav {
-      display: flex;
-      position: relative;
-    }
+    .fa { display: none; }
     .settings {
       position: absolute;
       top: 71px;
@@ -26,17 +26,15 @@
       li { border-radius: 0; }
     }
   }
-  .slider {
-    width: 640px;
-  }
   iframe {
     width: 640px;
     height: 360px;
   }
+  .necesity-type, .aditional-info { justify-content: space-around; }
+  .content { width: 40%; }
 }
 @media screen and (min-width: 850px) {
-  width: 853;
-  height: 480;
+  .content { width: 31%; }
 }
 @media screen and (min-width: 1260px) {
   .max-container { width: 1200px; }
