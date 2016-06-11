@@ -1,23 +1,25 @@
 %section
   %div
-    %h2 INGRESAR DATOS PARA LA BUSQUEDA DEL FALLECIDO
+    %h2 REGISTRO DEL FALLECIDO
     .walker-form
       %div
-        %label Buscar por Fecha de fallecimiento
+        %label Buscar por fecha
         %input{type: 'date'}
+      %div
       %div
         %label Buscar por DNI
         %input{type: 'text'}
       %div
         %label Sector
         %select
-          %option MAUSOLEO
-          %option VIP
-          %option ECONOMICA
+          %option Sector Mausoleo
+          %option Sector VIP
+          %option Sector Economico
+          %option Sector Economico
       .button-group
         %button.btn.btn-reverse BUSCAR
 %section
-  %h2 OBITUARIO
+  %h2 OBITUARIO DEL DIA
   .obituario
     %table
       %thead
@@ -26,7 +28,7 @@
           %th Sector
       %tbody
         %tr
-          %td Bla bla
+          %td No se encontraron Datos
           %td Sector 1
         %tr
           %td Bla bla
@@ -37,3 +39,4 @@
         %tr
           %td Bla bla
           %td Sector 1
+          
