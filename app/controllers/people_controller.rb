@@ -4,6 +4,7 @@ class PeopleController < ApplicationController
   # GET /people
   def index
     @people = Person.all
+    @sector = Sector.all
   end
 
   # GET /people/1
