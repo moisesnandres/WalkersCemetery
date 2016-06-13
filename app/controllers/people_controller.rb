@@ -3,8 +3,7 @@ class PeopleController < ApplicationController
 
   # GET /people
   def index
-    @people = Person.all
-    @sector = Sector.all
+    @people = Person.includes(:sector)
   end
 
   # GET /people/1
@@ -18,7 +17,6 @@ class PeopleController < ApplicationController
 
   # GET /people/1/edit
   def edit
-    @person = Person.find(params[:id])
   end
 
   # POST /people
