@@ -138,8 +138,13 @@ header {
   }
 }
 .content {
-  width: 100%;
-  h3 {
+  margin: 0px;
+  padding:0px;
+  color:0px;
+  font-family: helvetica;
+
+
+    h3 {
     padding: 10px;
     text-align: center;
     background: $primaryColor;
