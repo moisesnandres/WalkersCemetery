@@ -19,6 +19,7 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 6000,
   });
+  $('.datePicker').datepicker();
   $('.group').each(function(){
     if ($(this).find('input').val().length > 0) {
       $(this).parent().find('label').addClass('label-transition');
