@@ -18,6 +18,7 @@ class PeopleController < ApplicationController
 
   # GET /people/1/edit
   def edit
+    @person = Person.find(params[:id])
   end
 
   # POST /people
@@ -65,6 +66,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.fetch(:person, {})
+      params.require(:person).permit(:nombres, :apellidos, :fecha_nac, :fecha_fallecimiento, :obituario, :sector_id)
     end
 end
