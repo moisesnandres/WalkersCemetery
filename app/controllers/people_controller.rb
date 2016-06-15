@@ -12,6 +12,7 @@ class PeopleController < ApplicationController
 
   # GET /people/1
   def show
+    @person = Person.find(params[:id])
   end
 
   # GET /people/new

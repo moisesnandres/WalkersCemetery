@@ -1,4 +1,18 @@
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<h2>
+  <%= @person.nombres %>
+</h2>
+<h2>
+  <%= @person.apellidos %>
+</h2>
+<h2>
+  <%= @person.fecha_nac %>
+</h2>
+<h2>
+  <%= @person.fecha_fallecimiento %>
+</h2>
+<h2>
+  <%= @person.sector.nombre %>
+</h2>
+<%= link_to 'Editar', edit_person_path(@person) %> |
+<%= link_to 'Atrás', people_path %>

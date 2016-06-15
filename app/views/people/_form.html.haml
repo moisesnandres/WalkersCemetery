@@ -13,4 +13,4 @@
   = f.text_field :fecha_fallecimiento, placeholder: 'Fecha de defunción', required: true, class: 'datePicker'
   = f.select :sector_id, options_from_collection_for_select(Sector.all, 'id', 'nombre', "#{@person.sector_id}")
   .actions
-    = f.submit
+    %button Guardar
