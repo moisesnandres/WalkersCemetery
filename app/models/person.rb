@@ -2,7 +2,7 @@ class Person < ActiveRecord::Base
   filterrific(
     available_filters: [
       :search_query,
-    ]
+    ],
   )
   belongs_to :sector
   scope :search_query, lambda { |query|

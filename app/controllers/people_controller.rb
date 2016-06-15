@@ -5,7 +5,8 @@ class PeopleController < ApplicationController
   def index
     @filterrific = initialize_filterrific(
       Person,
-      params[:filterrific]
+      params[:filterrific],
+      persistence_id: false
     ) or return
     @people = @filterrific.find.page(params[:page]).includes(:sector)
   end
