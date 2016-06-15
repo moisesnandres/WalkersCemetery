@@ -2,33 +2,25 @@
 
 <h1>Lista de fallecidos</h1>
 
-<table class='table'>
-  <thead>
-    <tr>
-      <th>Nombres</th>
-      <th>Apellidos</th>
-      <th>Fecha de nacimiento</th>
-      <th>Fecha de fallecimiento</th>
-      <th>Sector</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @people.each do |person| %>
-      <tr>
-        <td><%= person.nombres %></td>
-        <td><%= person.apellidos %></td>
-        <td><%= person.fecha_nac %></td>
-        <td><%= person.fecha_fallecimiento %></td>
-        <td><%= person.sector.nombre %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Person', new_person_path %>
+<%#
+  Filterrific adds the `form_for_filterrific` view helper:
+  * adds dom id 'filterrific_filter'
+  * applies javascript behaviors:
+      * AJAX form submission on change
+      * AJAX spinner while AJAX request is being processed
+  * sets form_for options like :url, :method and input name prefix
+%>
+<%= form_for_filterrific @filterrific do |f| %>
+  <div>
+    Search
+    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
+    <%= f.text_field(
+      :search_query,
+      class: 'filterrific-periodically-observed'
+    ) %>
+  </div>
+<% end %>
+<%= render(
+  partial: 'people/list',
+  locals: { people: @people }
+) %>
