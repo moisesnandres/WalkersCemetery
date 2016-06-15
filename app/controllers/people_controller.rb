@@ -3,11 +3,17 @@ class PeopleController < ApplicationController
 
   # GET /people
   def index
-    @people = Person.includes(:sector)
+    @filterrific = initialize_filterrific(
+      Person,
+      params[:filterrific],
+      persistence_id: false
+    ) or return
+    @people = @filterrific.find.page(params[:page]).includes(:sector)
   end
 
   # GET /people/1
   def show
+    @person = Person.find(params[:id])
   end
 
   # GET /people/new

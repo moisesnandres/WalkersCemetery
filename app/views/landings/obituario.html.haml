@@ -7,15 +7,7 @@
           %th Datos del beneficiario
           %th Sector
       %tbody
-        %tr
-          %td Bla bla
-          %td Sector 1
-        %tr
-          %td Bla bla
-          %td Sector 1
-        %tr
-          %td Bla bla
-          %td Sector 1
-        %tr
-          %td Bla bla
-          %td Sector 1
+        - @people.each do |person|
+          %tr
+            %td= "#{person.nombres} #{person.apellidos}"
+            %td= person.sector.nombre
