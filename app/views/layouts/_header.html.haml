@@ -9,10 +9,6 @@
           %li INICIO
         =link_to people_path do
           %li BÚSQUEDA
-        =link_to informes_path do
-          %li INFORMES
-        =link_to obituario_path do
-          %li OBITUARIO
         - if admin_signed_in?
           %li.account CUENTA
           %ul.settings.no-padding
