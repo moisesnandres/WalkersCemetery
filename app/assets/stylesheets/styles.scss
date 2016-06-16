@@ -11,7 +11,7 @@ iframe {
   height: 169px;
 }
 section {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 ul {
   list-style: none;
@@ -151,10 +151,19 @@ header {
   margin-bottom: 20px;
 }
 .contact {
+  background: $secondaryColor;
   h2 {
     margin-top: 0;
     text-align: center;
-    color: $darkPrimaryColor;
+    color: #fff;
+  }
+  .contact-form {
+    input, textarea {
+      padding: 1rem;
+      width: 100%;
+      border-color: transparent;
+    }
+    button { width: 100%; }
   }
 }
 .contact-form, .walker-form {
@@ -177,6 +186,10 @@ header {
   }
 }
 .obituario {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
   table {
     width: 90%;
     max-width: 480px;
