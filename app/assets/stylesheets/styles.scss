@@ -24,7 +24,7 @@ section h2 {
 }
 // HEADER STYLES
 header {
-  background: $black;
+  background: #3B761C;
   padding: 15px 0;
   .max-container {
     display: flex;
@@ -41,23 +41,29 @@ header {
     width: 100%;
     display: none;
   }
-  .logo img { height: 60px; }
+  .logo {
+    width: 236px;
+    img { width: 100%; }
+  }
   li {
     color: #fff;
     padding: 1rem;
-    border-radius: 5px;
     cursor: pointer;
     a { color: inherit; }
     &:hover {
-      background: $primaryColor;
+      border-bottom: 2px solid #fff;
     }
   }
   .settings { display: none; }
 }
 .background {
-  height: 50vh;
-  background-image: image-url("background.jpg");
+  display: flex;
+  min-height: 50vh;
+  background-image: image-url("background.png");
   background-size: cover;
+  color: #fff;
+  h3 { color: #fff; }
+  .max-container { display: flex; }
 }
 .max-container, .medium-container {
   margin: 0 auto;
@@ -117,11 +123,7 @@ header {
   }
 }
 .slider {
-  h3 { color: $primaryColor; }
   text-align: center;
-}
-.medium-container {
-  width: 250px;
 }
 .card {
   background: white;

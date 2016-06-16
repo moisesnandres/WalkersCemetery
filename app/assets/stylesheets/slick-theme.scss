@@ -6,15 +6,15 @@ $slick-font-path: "./fonts/" !default;
 $slick-font-family: "slick" !default;
 $slick-loader-path: "./" !default;
 $slick-arrow-color: white !default;
-$slick-dot-color: black !default;
+$slick-dot-color: white !default;
 $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "←" !default;
 $slick-next-character: "→" !default;
 $slick-dot-character: "•" !default;
 $slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
+$slick-opacity-default: 1 !default;
 $slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
+$slick-opacity-not-active: 1 !default;
 
 @function slick-image-url($url) {
     @if function-exists(image-url) {
@@ -36,11 +36,6 @@ $slick-opacity-not-active: 0.25 !default;
 
 /* Slider */
 
-.slick-list {
-    .slick-loading & {
-        background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
-    }
-}
 
 /* Icons */
 @if $slick-font-family == "slick" {
@@ -91,7 +86,7 @@ $slick-opacity-not-active: 0.25 !default;
     font-family: $slick-font-family;
     font-size: 20px;
     line-height: 1;
-    color: $primaryColor;
+    color: #fff;
     opacity: $slick-opacity-default;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -105,7 +100,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
     &:before {
       content: "\f053";
-      color: $primaryColor;
+      color: #fff;
       font-size: 30px;
       font-family: FontAwesome;
     }
@@ -119,7 +114,7 @@ $slick-opacity-not-active: 0.25 !default;
     }
     &:before {
       content: "\f054";
-      color: $primaryColor;
+      color: #fff;
       font-size: 30px;
       font-family: FontAwesome;
     }
@@ -128,11 +123,9 @@ $slick-opacity-not-active: 0.25 !default;
 /* Dots */
 
 .slick-slider {
-    margin-bottom: 30px;
-}
+    margin: auto; }
 
 .slick-dots {
-    position: absolute;
     bottom: -45px;
     list-style: none;
     display: block;
@@ -159,10 +152,11 @@ $slick-opacity-not-active: 0.25 !default;
             color: transparent;
             padding: 5px;
             cursor: pointer;
+            color: #fff;
             &:hover, &:focus {
                 outline: none;
                 &:before {
-                    opacity: $primaryColor;
+                    color: #fff;
                 }
             }
             &:before {
@@ -183,7 +177,7 @@ $slick-opacity-not-active: 0.25 !default;
             }
         }
         &.slick-active button:before {
-            color: $primaryColor;
+            color: $secondaryColor;
             opacity: $slick-opacity-default;
         }
     }
