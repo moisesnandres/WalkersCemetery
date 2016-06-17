@@ -2,6 +2,7 @@
 # LandingsController
 class LandingsController < ApplicationController
   def home
-    @people = Person.all.where(fecha_fallecimiento: '2016-10-30')
+    @people = Person.all.where(fecha_fallecimiento: Time.zone.now.strftime("%Y-%m-%d")
+)
   end
 end

@@ -86,9 +86,9 @@ header {
   }
 }
 .notice {
-  color: #3c763d;
-  background-color: #dff0d8;
-  border-color: #d6e9c6;
+  color: #fff;
+  background-color: $primaryColor;
+  border-top: 1px solid #fff;
 }
 .flex-container {
   align-items: center;
