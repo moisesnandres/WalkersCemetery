@@ -1,0 +1,13 @@
+%p#notice= notice
+%section.max-container
+  %h2 Datos del beneficiario
+  .data
+    %h3= @person.nombres_completos
+    %h3= @person.fecha_nac
+    %h3= @person.fecha_fallecimiento
+    %h3= @person.sector.nombre
+  - if admin_signed_in?
+    .walker-form
+      .btn-group
+        = link_to 'Editar', edit_person_path(@person), class: 'btn-block btn'
+        = link_to 'Atrás', people_path, class: 'btn-block btn btn-cancel'

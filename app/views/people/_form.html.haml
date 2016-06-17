@@ -7,10 +7,17 @@
       %ul
         - @person.errors.full_messages.each do |message|
           %li= message
-  = f.text_field :nombres, placeholder: 'Nombres', required: true
-  = f.text_field :apellidos, placeholder: 'Apellidos', required: true
-  = f.text_field :fecha_nac, placeholder: 'Fecha de nacimiento', required: true, class: 'datePicker'
-  = f.text_field :fecha_fallecimiento, placeholder: 'Fecha de defunción', required: true, class: 'datePicker'
-  = f.select :sector_id, options_from_collection_for_select(Sector.all, 'id', 'nombre', "#{@person.sector_id}")
-  .actions
-    %button Guardar
+  .walker-form
+    %div
+      = f.text_field :nombres, placeholder: 'Nombres', required: true
+    %div
+      = f.text_field :apellidos, placeholder: 'Apellidos', required: true
+    %div
+      = f.text_field :fecha_nac, placeholder: 'Fecha de nacimiento', required: true, class: 'datePicker'
+    %div
+      = f.text_field :fecha_fallecimiento, placeholder: 'Fecha de defunción', required: true, class: 'datePicker'
+    %div
+      = f.select :sector_id, options_from_collection_for_select(Sector.all, 'id', 'nombre', "#{@person.sector_id}")
+    .btn-group
+      %button.btn Guardar
+      = link_to 'Cancelar', people_path, class: 'btn-block btn btn-cancel'

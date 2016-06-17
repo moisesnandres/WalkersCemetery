@@ -36,6 +36,7 @@ $(document).ready(function(){
       }
     });
   });
+  $('#notice, #alert').remove();
 });
 $(window).resize(function(){
   if ($(window).width()>768) {

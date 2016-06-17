@@ -32,24 +32,18 @@ class PeopleController < ApplicationController
     respond_to do |format|
       if @person.save
         format.html { redirect_to @person, notice: 'El beneficiario fue añadido.' }
-        format.json { render :show, status: :created, location: @person }
       else
         format.html { render :new }
-        format.json { render json: @person.errors, status: :unprocessable_entity }
       end
     end
   end
 
   # PATCH/PUT /people/1
   def update
-    respond_to do |format|
-      if @person.update(person_params)
-        format.html { redirect_to @person, notice: 'Los datos del beneficiario fueron actualizados.' }
-        format.json { render :show, status: :ok, location: @person }
-      else
-        format.html { render :edit }
-        format.json { render json: @person.errors, status: :unprocessable_entity }
-      end
+    if @person.update(person_params)
+      redirect_to @person, notice: 'Los datos del beneficiario fueron actualizados.'
+    else
+      render :edit
     end
   end
 
@@ -57,8 +51,7 @@ class PeopleController < ApplicationController
   def destroy
     @person.destroy
     respond_to do |format|
-      format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html { redirect_to people_url, notice: 'El beneficiario fue removido.' }
     end
   end
 

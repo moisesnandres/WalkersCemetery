@@ -1,7 +1,8 @@
 # encoding: utf-8
 # LandingsController
 class LandingsController < ApplicationController
-  def obituario
-    @people = Person.all.where(fecha_fallecimiento: '2016-10-30')
+  def home
+    @people = Person.all.where(fecha_fallecimiento: Time.zone.now.strftime("%Y-%m-%d")
+)
   end
 end
