@@ -125,6 +125,19 @@ header {
     background-color: $darkPrimaryColor;
   }
 }
+.new {
+  margin-top: 30px;
+  a {
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+.actions button {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+}
 .slider {
   text-align: center;
 }
