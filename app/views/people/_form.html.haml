@@ -17,7 +17,8 @@
     %div
       = f.text_field :fecha_fallecimiento, placeholder: 'Fecha de defunción', required: true, class: 'datePicker'
     %div
-      = f.select :sector_id, options_from_collection_for_select(Sector.all, 'id', 'nombre', "#{@person.sector_id}")
+      = f.select :sector_id, options_from_collection_for_select(Sector.all.order(created_at: :asc), 'id', 'nombre', "#{@person.sector_id}"), { :include_blank => 'Seleccionar sector' }, :required => true
+    %figure.sector= image_tag 'parque.png'
     .btn-group
       %button.btn Guardar
       = link_to 'Cancelar', people_path, class: 'btn-block btn btn-cancel'
