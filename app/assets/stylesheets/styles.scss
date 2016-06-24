@@ -260,8 +260,14 @@ header {
   table {
     margin: 20px auto 0;
     width: 100%;
-    max-width: 600px;
-    td { text-align: center; }
+    max-width: 450px;
+    td {
+      text-align: left;
+      a {
+        color: $black;
+        &:hover { color: $secondaryColor; }
+      }
+    }
   }
 }
 .sector {
