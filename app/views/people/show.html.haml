@@ -6,6 +6,7 @@
     %h3= @person.fecha_nac
     %h3= @person.fecha_fallecimiento
     %h3= @person.sector.nombre
+  %figure.sector= image_tag "sector-#{@person.sector.id}"
   - if admin_signed_in?
     .walker-form
       .btn-group

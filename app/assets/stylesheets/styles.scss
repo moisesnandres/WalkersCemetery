@@ -264,5 +264,10 @@ header {
     td:last-child { text-align: right; }
   }
 }
+.sector {
+  max-width: 720px;
+  margin: 20px auto;
+  img { width: 100%; }
+}
 .no-margin { margin: 0; }
 .no-padding { padding: 0;}
