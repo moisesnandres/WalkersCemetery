@@ -2,10 +2,18 @@
 %section.max-container
   %h2 Datos del beneficiario
   .data
-    %h3= "Nombres completos: #{@person.nombres_completos}"
-    %h3= "Fecha de nacimiento: #{@person.fecha_nac}"
-    %h3= "Fecha de defunción: #{@person.fecha_fallecimiento}"
-    %h3= "Sector: #{@person.sector.nombre}"
+    .show-data
+      %h3 Nombres:
+      %h3= @person.nombres_completos
+    .show-data
+      %h3 Fecha de nacimiento:
+      %h3= @person.fecha_nac
+    .show-data
+      %h3 Fecha de defunción:
+      %h3= @person.fecha_fallecimiento
+    .show-data
+      %h3 Sector:
+      %h3= @person.sector.nombre
   %figure.sector= image_tag "sector-#{@person.sector.id}.png"
   - if admin_signed_in?
     .walker-form

@@ -1,4 +1,4 @@
 <% js = escape_javascript(
-  render(partial: 'people/list', locals: { people: @people })
+  render(partial: 'people/list', locals: { people: @people.order(apellidos: :asc) })
 ) %>
 $("#filterrific_results").html("<%= js %>");

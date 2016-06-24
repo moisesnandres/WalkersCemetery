@@ -3,5 +3,4 @@
     %tbody
       - people.each do |person|
         %tr
-          %td= person.nombres_completos
-          %td= link_to 'Mostrar', person
+          %td= link_to person.nombres_completos_2, person
