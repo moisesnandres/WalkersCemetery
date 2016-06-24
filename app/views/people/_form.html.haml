@@ -9,15 +9,16 @@
           %li= message
   .walker-form
     %div
-      = f.text_field :nombres, placeholder: 'Nombres', required: true
+      = f.text_field :nombres, placeholder: 'Nombres', required: true, pattern: '[a-zA-Z ]*$', title: 'Introduzca su(s) nombre(s) correctamente'
     %div
-      = f.text_field :apellidos, placeholder: 'Apellidos', required: true
+      = f.text_field :apellidos, placeholder: 'Apellidos', required: true, pattern: '[a-zA-Z ]*$', title: 'Introduzca su(s) apellido(s) correctamente'
+    .start-date
+      = f.text_field :fecha_nac, placeholder: 'Fecha de nacimiento', required: true, class: 'datePicker', pattern: '[0-3]+[0-9]+/+[0-1][0-9]+/[0-9]{4}', title: 'Introduzca la fecha correctamente'
+    .end-date
+      = f.text_field :fecha_fallecimiento, placeholder: 'Fecha de defunción', required: true, class: 'datePicker', pattern: '[0-3]+[0-9]+/+[0-1][0-9]+/[0-9]{4}', title: 'Introduzca la fecha correctamente'
     %div
-      = f.text_field :fecha_nac, placeholder: 'Fecha de nacimiento', required: true, class: 'datePicker'
-    %div
-      = f.text_field :fecha_fallecimiento, placeholder: 'Fecha de defunción', required: true, class: 'datePicker'
-    %div
-      = f.select :sector_id, options_from_collection_for_select(Sector.all, 'id', 'nombre', "#{@person.sector_id}")
+      = f.select :sector_id, options_from_collection_for_select(Sector.all.order(created_at: :asc), 'id', 'nombre', "#{@person.sector_id}"), { :include_blank => 'Seleccionar sector' }, :required => true
+    %figure.sector= image_tag 'parque.png'
     .btn-group
       %button.btn Guardar
       = link_to 'Cancelar', people_path, class: 'btn-block btn btn-cancel'

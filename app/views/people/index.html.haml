@@ -2,7 +2,7 @@
 %section.search.max-container
   = form_for_filterrific @filterrific do |f|
     = f.text_field( :search_query, class: 'filterrific-periodically-observed', placeholder: 'Buscar por nombre o apellido' )
-  = render(partial: 'people/list', locals: { people: @people })
+  = render(partial: 'people/list', locals: { people: @people.order(apellidos: :asc) })
   - if admin_signed_in?
     .new
       = link_to 'Añadir beneficiario', new_person_path, class: 'btn btn-block'

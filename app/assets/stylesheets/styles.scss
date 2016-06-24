@@ -260,9 +260,23 @@ header {
   table {
     margin: 20px auto 0;
     width: 100%;
-    max-width: 600px;
-    td:last-child { text-align: right; }
+    max-width: 450px;
+    td {
+      text-align: left;
+      a {
+        color: $black;
+        &:hover { color: $secondaryColor; }
+      }
+    }
   }
+}
+.sector {
+  max-width: 720px;
+  margin: 20px auto;
+  img { width: 100%; }
+}
+.show-data h3:first-child {
+  color: $secondaryColor;
 }
 .no-margin { margin: 0; }
 .no-padding { padding: 0;}

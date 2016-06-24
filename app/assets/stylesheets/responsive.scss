@@ -36,6 +36,11 @@
   .slick-slider { margin: auto auto auto 0; }
   .slick-prev { left: 0; }
   .slick-list { margin-left: 50px; }
+  .show-data {
+    display: flex;
+    h3 { flex: 1; }
+  }
+  .data { max-width: 600px; }
 }
 @media screen and (min-width: 850px) {
   .content { width: 31%; }

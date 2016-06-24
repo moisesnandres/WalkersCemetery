@@ -25,4 +25,8 @@ class Person < ActiveRecord::Base
     [nombres, apellidos].join(' ')
   end
 
+  def nombres_completos_2
+    [apellidos, nombres].join(', ')
+  end
+
 end
