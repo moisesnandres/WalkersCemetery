@@ -23,7 +23,7 @@ $(document).ready(function(){
   //validate
   var startDate, endDate;
   var date = new Date();
-  var today = (("0" + date.getDate()).slice(-2) + '/' + ("0" + date.getMonth()).slice(-2) + '/' + date.getFullYear().toString()).split('/');
+  var today = (("0" + (date.getDate()+1)).slice(-2) + '/' + ("0" + date.getMonth()).slice(-2) + '/' + date.getFullYear().toString()).split('/');
   $('.start-date input').change(function(){
     startDate = $(this).val();
     startDate = startDate.split('/');
