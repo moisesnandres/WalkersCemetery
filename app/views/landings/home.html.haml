@@ -26,12 +26,12 @@
             %td= person.sector.nombre
 %section.contact
   %h2 CONTÁCTENOS
-  = form_tag root_path, class: 'contact-form' do
+  .contact-form
     %div
-      = text_field_tag 'nombres', nil, placeholder: 'Nombres', required: true, pattern: '[a-zA-Z ]*$', title: 'Introduzca su(s) nombre(s) correctamente'
+      %input{type: 'text', placeholder: 'Nombres'}
     %div
-      = email_field_tag 'correo', nil, placeholder: 'Correo electrónico', required: true
+      %input{type: 'email', placeholder: 'Correo electrónico'}
     %div
-      = text_area_tag 'mensaje', nil, placeholder: 'Escriba su mensaje', required: true
+      %textarea{placeholder: 'Escriba su mensaje'}
     %div
       %button.btn ENVIAR
