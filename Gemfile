@@ -11,7 +11,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'haml'
-gem 'pg'
 gem 'filterrific'
 gem 'will_paginate', '~> 3.1.0'
 
@@ -51,3 +50,6 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+end
