@@ -1,0 +1,15 @@
+%section.contact
+  %h2 Sectores del Parque del Recuerdo
+  .sector= image_tag 'parque-sectorizado.png'
+  %table.contact-table
+    %thead
+      %tr
+        %th Sector
+        %th Nichos disponibles
+    %tbody
+      - @sectors.each do |sector|
+        %tr
+          %td= sector.nombre
+          %td= sector.disponible
+  %h2 Contáctenos
+  = render 'form'

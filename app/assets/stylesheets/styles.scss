@@ -278,5 +278,20 @@ header {
 .show-data h3:first-child {
   color: $secondaryColor;
 }
+.contact-table {
+  width: 320px;
+  margin: 10px auto 30px;
+  text-align: left;
+  border-collapse: collapse;
+  td, th {
+    border: 1px solid $black;
+    padding: 10px;
+  }
+  th {
+    background: $primaryColor;
+    color: #fff;
+  }
+  td:last-child { text-align: right; }
+}
 .no-margin { margin: 0; }
 .no-padding { padding: 0;}

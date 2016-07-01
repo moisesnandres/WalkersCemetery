@@ -3,21 +3,17 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-  end
-
-  # GET /users/1/edit
-  def edit
+    @sectors = Sector.all
   end
 
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
-
     respond_to do |format|
       if @user.save
         ExampleMailer.sample_email(@user).deliver_later
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Le enviamos un mensaje a su correo.' }
       else
         format.html { render :new }
       end
