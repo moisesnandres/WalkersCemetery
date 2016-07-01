@@ -14,24 +14,16 @@
   = image_tag 'logo-cruz.png'
   %h2 OBITUARIO
   .obituario
-    %table
-      %thead
-        %tr
-          %th Datos del beneficiario
-          %th Sector
-      %tbody
-        - @people.each do |person|
+    - if @people.count == 0
+      %h4 No hay obituarios registrados hoy
+    - else
+      %table
+        %thead
           %tr
-            %td= "#{person.nombres} #{person.apellidos}"
-            %td= person.sector.nombre
-%section.contact
-  %h2 CONTÁCTENOS
-  .contact-form
-    %div
-      %input{type: 'text', placeholder: 'Nombres'}
-    %div
-      %input{type: 'email', placeholder: 'Correo electrónico'}
-    %div
-      %textarea{placeholder: 'Escriba su mensaje'}
-    %div
-      %button.btn ENVIAR
+            %th Datos del beneficiario
+            %th Sector
+        %tbody
+          - @people.each do |person|
+            %tr
+              %td= "#{person.nombres} #{person.apellidos}"
+              %td= person.sector.nombre

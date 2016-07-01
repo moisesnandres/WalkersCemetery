@@ -9,6 +9,8 @@
           %li INICIO
         =link_to people_path do
           %li BÚSQUEDA
+        =link_to contact_path do
+          %li CONTÁCTENOS
         - if admin_signed_in?
           %li.account CUENTA
           %ul.settings.no-padding

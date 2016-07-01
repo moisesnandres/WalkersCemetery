@@ -1,6 +1,6 @@
 class PeopleController < ApplicationController
   before_action :set_person, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_admin!, except: [:show, :index]
   # GET /people
   def index
     @filterrific = initialize_filterrific(
