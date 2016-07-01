@@ -21,12 +21,22 @@ $(document).ready(function(){
   });
   $('.datePicker').datepicker();
   //validate
-  var startDate, endDate;
+  var startDate, endDate, day, year;
+  function arrayElements(array) {
+    day = array[0];
+    year = array[2];
+    array.shift();
+    array.unshift(year);
+    array.pop();
+    array.push(day);
+  }
   var date = new Date();
-  var today = (("0" + (date.getDate()+1)).slice(-2) + '/' + ("0" + date.getMonth()).slice(-2) + '/' + date.getFullYear().toString()).split('/');
+  var today = (("0" + (date.getDate() )).slice(-2) + '/' + ("0" + (date.getMonth()+1)).slice(-2) + '/' + date.getFullYear().toString()).split('/');
+  arrayElements(today);
   $('.start-date input').change(function(){
     startDate = $(this).val();
     startDate = startDate.split('/');
+    arrayElements(startDate)
     $('.end-date input').val('');
     if (startDate > today) {
       alert('Fecha inválida');
@@ -36,6 +46,7 @@ $(document).ready(function(){
   $('.end-date input').change(function(){
     endDate = $(this).val();
     endDate = endDate.split('/');
+    arrayElements(endDate);
     compareDate = startDate;
     if (endDate < compareDate) {
       alert('Fecha inválida');
