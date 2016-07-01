@@ -20,3 +20,5 @@
       .btn-group
         = link_to 'Editar', edit_person_path(@person), class: 'btn-block btn'
         = link_to 'Atrás', people_path, class: 'btn-block btn btn-cancel'
+      .btn-group
+        = link_to 'Eliminar', @person, confirm: '¿Estás seguro?', method: :delete, class: 'btn-danger btn-block btn btn-cancel'

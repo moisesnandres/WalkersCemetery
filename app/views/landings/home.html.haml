@@ -14,24 +14,16 @@
   = image_tag 'logo-cruz.png'
   %h2 OBITUARIO
   .obituario
-    %table
-      %thead
-        %tr
-          %th Datos del beneficiario
-          %th Sector
-      %tbody
-        - @people.each do |person|
+    - if @people.count == 0
+      %h4 No hay obituarios registrados hoy
+    - else
+      %table
+        %thead
           %tr
-            %td= "#{person.nombres} #{person.apellidos}"
-            %td= person.sector.nombre
-%section.contact
-  %h2 CONTÁCTENOS
-  = form_tag root_path, class: 'contact-form' do
-    %div
-      = text_field_tag 'nombres', nil, placeholder: 'Nombres', required: true, pattern: '[a-zA-Z ]*$', title: 'Introduzca su(s) nombre(s) correctamente'
-    %div
-      = email_field_tag 'correo', nil, placeholder: 'Correo electrónico', required: true
-    %div
-      = text_area_tag 'mensaje', nil, placeholder: 'Escriba su mensaje', required: true
-    %div
-      %button.btn ENVIAR
+            %th Datos del beneficiario
+            %th Sector
+        %tbody
+          - @people.each do |person|
+            %tr
+              %td= "#{person.nombres} #{person.apellidos}"
+              %td= person.sector.nombre

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'landings#home'
   resources :people
   resources :users
-  get 'contactenos' => 'users#new'
+  get 'contactenos' => 'users#new', as: :contact
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
