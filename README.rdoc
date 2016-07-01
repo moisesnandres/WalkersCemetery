@@ -1,3 +1,5 @@
 == README
 
-Nothing to show yet
+bundle install --without production
+rake db:migrate db:seed
+rails s
